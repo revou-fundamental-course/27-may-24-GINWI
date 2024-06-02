@@ -9,9 +9,58 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- CSS RESET -->
     <link rel="stylesheet" href="css/reset.css" />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <!-- GOOGLE FONTS -->
+    <!-- BARLOW FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Jaro:opsz@6..72&family=Jersey+25&family=League+Spartan:wght@100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- MULISH FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Jaro:opsz@6..72&family=Jersey+25&family=League+Spartan:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- NUNITO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Jaro:opsz@6..72&family=Jersey+25&family=League+Spartan:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <!-- LOGIN/REGISTER SIDE -->
+    <section class="login-register-side">
+        <article class="login-side">
+            <h1 class="login-side-title">Login</h1>
+            <section class="login-side-username">
+                <label for="username">Username : </label>
+                <input type="text" id="username" placeholder="Enter Your Name" />
+            </section>
+            <section class="login-side-password">
+                <label for="password">Password :</label>
+                <input type="password" id="password" placeholder="Enter Your Password" />
+            </section>
+            <section class="login-side-email">
+                <label for="Email">Email : </label>
+                <input type="email" id="emaiL" placeholder="Enter Your Email" />
+            </section>
+            <section class="login-side-phone-number">
+                <label for="phone-number">Phone Number : </label>
+                <input type="number" id="phonenumber" placeholder="Enter Your Phone Number" />
+            </section>
+            <section class="login-side-sumbit">
+                <input type="submit" id="login-sumbit" class="login-sumbit" />
+            </section>
+            <p class="do-not">Don't have an account? Register here !</p>
+        </article>
+    </section>
     <!-- HEADER -->
     <header class="header">
         <!-- NAVIGATION BAR -->
@@ -20,18 +69,19 @@
                 <img src="assets/img/logo/logo.png" alt="Winner School Logo" class="header-logo" />
             </section>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Our Profile</a></li>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#our-profilen">Our Profile</a></li>
                 <li><a href="">Achievement</a></li>
-                <li><a href="">Message Us</a></li>
+                <li><a href="#message-us">Message Us</a></li>
             </ul>
             <section class="section-button">
                 <button class="btn login">Login</button>
                 <button class="btn regist">Register</button>
+                <button class="btn logout">Logout</button>
             </section>
         </nav>
         <!-- BANNER -->
-        <section class="banner">
+        <section class="banner" id="banner">
             <section class="banner-txt">
                 <h1 class="title">Hi Friends, Let's Register for School Here !</h1>
                 <p class="description">Welcome to Winner International School ( WIS ), a leading computer school
@@ -56,105 +106,193 @@
 
     <!-- MAIN -->
     <main>
-        <!-- OUR FACILITATION -->
-        <section class="our-facilitation">
-            <header class="our-facilitation-header">
-                <h2 class="our-facilitation-title">Our Facilitation</h2>
-            </header>
-            <section class="our-facilitation-section">
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/experienced-teacher.jpg" alt="Experienced Teacher"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Experienced Teacher</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/refill-water.png" alt="Fill Drinking Water"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Free Fill of Drinking Water</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/clean-toilet.png" alt="Clean Toilet"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Clean Toilet</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/library.png" alt="Library" class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Thousand of Books in The Library</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/parking-area.png" alt="Spacious Parking Area"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Spacious Parking Area</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/meeting-room.jpg" alt="Meeting Room"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Meeting Room</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/classroom.png" alt="Comfortable Class"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Comfortable Class</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/all-musical-instrument.png" alt="All Musical Instrument"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">All Musical Instrument</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/sport/swimming-pool.png" alt="Swimming Pool"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Swimming Pool</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/sport/badminton-court.png" alt="Badminton Court"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Badminton Court</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/sport/basketball-court.png" alt="Basketball Court"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Basketball Court</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/sport/volleyball-court.png" alt="Volley Court"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Volley Court</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/sport/tennis-court.png" alt="Tennis Court"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Tennis Court</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/sport/pingpong-playing-area.png" alt="Ping Pong Playing Area"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Ping-Pong Playing Area</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/computer-room.png" alt="Computer Room"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Computer Room</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/lab/chemistry-lab.png" alt="Chemistry Lab"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Chemistry Lab</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/lab/physics-lab.png" alt="Physics Lab"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Physics Lab</p>
-                </div>
-                <div class="img-border">
-                    <img src="assets/img/our-facilition/lab/biology-lab.png" alt="Biology Lab"
-                        class="our-facilitation-img" />
-                    <p class="our-facilitation-subtitle">Biology Lab</p>
-                </div>
+        <!-- OUR PROFILE -->
+        <section class="our-profile" id="our-profile">
+            <!-- SCHOOL LOGO & NAME -->
+            <section class="logo-name">
+                <img src="assets/img/logo/logo.png" alt="Winner International School Logo's" class="school-logo"/>
+                <h2 class="name-school">Winner International School</h2>
+            </section>
+            <!-- VISION AND MISSION -->
+            <section class="vision-mision">
+                <article class="vision">
+                    <h4>Vission</h4>
+                    <p>to be a premier educational institution that produces outstanding and globally coompetitive
+                        graduates in the field of information technology. We are decicated to providing high-quality
+                        education aligned with the latest technological advancement.</p>
+                </article>
+                <article class="mission">
+                    <h4>Mission</h4>
+                    <section class="missions">
+                        <article class="missions-1">
+                            <h6>1. Provide High-Quality Education</h6>
+                            <p>- Offer a curriculum that is relevant to the latest technological advancements.</p>
+                            <p>- Utilize innovative and technology-based teaching methods.</p>
+                            <p>- Employ knowledgeable and experienced educators in the field of information technology.
+                            </p>
+                            <p>- Implement a rigorous assessment system to ensure educational standards.</p>
+                            <p>- Facilitate small class sizes to provide personalized attention to students.</p>
+                        </article>
+                        <article class="missions-2">
+                            <h6>2. Foster Innovation and Creativity</h6>
+                            <p>- Develop interactive programs that stimulate creative thinking.</p>
+                            <p>- Support research and innovative projects that solve real-world problems</p>
+                            <p>- Organize technology competitions and exhibitions to showcase students' creativity.</p>
+                            <p>- Encourage interdisciplinary collaboration to foster innovative solutions.</p>
+                            <p>- Provide access to cutting-edge technology and tools for experimentation</p>
+                        </article>
+                        <article class="missions-3">
+                            <h6>3. Develop Practical and Professional Skills</h6>
+                            <p>- Integrate project-based learning into the curriculum.</p>
+                            <p>- Provide professional training and certification recognized by the industry.</p>
+                            <p>- Form partnerships with technology companies to offer real-world work experiences.</p>
+                            <p>- Establish internship and co-op programs with leading tech firms. </p>
+                            <p>- Offer workshops and seminars led by industry experts to enhance practical skills.</p>
+                        </article>
+                        <article class="missions-4">
+                            <h6>4. Cultivate a Lifelong Learning Mindset</h6>
+                            <p>- Offer continuous training and professional development programs.</p>
+                            <p>- Encourage students to consistently update their knowledge and skills.</p>
+                            <p>- Provide access to current and relevant learning resources.</p>
+                            <p>- Foster a culture of curiosity and intellectual growth.</p>
+                            <p>- Implement mentorship programs to guide students in their learning journeys.</p>
+                        </article>
+                        <article class="missions-5">
+                            <h6>5. Instill Adaptability to Technological Changes</h6>
+                            <p>- Equip students with strong analytical and problem-solving abilities.</p>
+                            <p>- Teach the importance of flexibility and adaptability in technology careers.</p>
+                            <p>- Stay abreast of trends and changes in the IT industry to ensure educational relevance.
+                            </p>
+                            <p>- Develop courses that emphasize emerging technologies and future trends.</p>
+                            <p>- Encourage students to participate in tech forums and conferences to stay updated.</p>
+                        </article>
+                        <article class="missions-6">
+                            <h6>6. Promote Ethical and Responsible Use of Technology</h6>
+                            <p>- Educate students on the ethical implications of technology use.</p>
+                            <p>- Promote responsible digital citizenship and online behavior.</p>
+                            <p>- Encourage the development of technology solutions that benefit society.</p>
+                            <p>- Include courses on cybersecurity and data privacy in the curriculum.</p>
+                            <p>- Foster an understanding of the global impact of technological decisions.</p>
+                        </article>
+                        <article class="missions-7">
+                            <h6>7. Enhance Global Competitiveness</h6>
+                            <p>- Prepare students for the global IT market with language and cultural training.</p>
+                            <p>- Facilitate international exchange programs and collaborations.</p>
+                            <p>- Encourage participation in global tech competitions and conferences.</p>
+                            <p>- Develop a network of alumni working in prominent tech companies worldwide.</p>
+                            <p>- Provide training on global industry standards and practices.</p>
+                        </article>
+                        <article class="missions-8">
+                            <h6>8. Support Personal and Professional Growth</h6>
+                            <p>- Offer career counseling and support services.</p>
+                            <p> - Provide leadership training and opportunities for students.</p>
+                            <p> - Encourage participation in extracurricular activities and clubs.</p>
+                            <p>- Foster a supportive and inclusive school environment.</p>
+                            <p>- Support students in building a professional portfolio and resume.</p>
+                        </article>
+                    </section>
+                </article>
+            </section>
+            <!-- OUR FACILITATION -->
+            <section class="our-facilitation">
+                <header class="our-facilitation-header">
+                    <h2 class="our-facilitation-title">Our Facilitation</h2>
+                </header>
+                <section class="our-facilitation-section">
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/experienced-teacher.jpg" alt="Experienced Teacher"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Experienced Teacher</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/refill-water.png" alt="Fill Drinking Water"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Free Fill of Drinking Water</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/clean-toilet.png" alt="Clean Toilet"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Clean Toilet</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/library.png" alt="Library" class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Thousand of Books in The Library</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/parking-area.png" alt="Spacious Parking Area"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Spacious Parking Area</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/meeting-room.jpg" alt="Meeting Room"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Meeting Room</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/classroom.png" alt="Comfortable Class"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Comfortable Class</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/all-musical-instrument.png" alt="All Musical Instrument"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">All Musical Instrument</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/sport/swimming-pool.png" alt="Swimming Pool"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Swimming Pool</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/sport/badminton-court.png" alt="Badminton Court"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Badminton Court</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/sport/basketball-court.png" alt="Basketball Court"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Basketball Court</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/sport/volleyball-court.png" alt="Volley Court"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Volley Court</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/sport/tennis-court.png" alt="Tennis Court"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Tennis Court</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/sport/pingpong-playing-area.png"
+                            alt="Ping Pong Playing Area" class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Ping-Pong Playing Area</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/computer-room.png" alt="Computer Room"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Computer Room</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/lab/chemistry-lab.png" alt="Chemistry Lab"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Chemistry Lab</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/lab/physics-lab.png" alt="Physics Lab"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Physics Lab</p>
+                    </div>
+                    <div class="img-border">
+                        <img src="assets/img/our-facilition/lab/biology-lab.png" alt="Biology Lab"
+                            class="our-facilitation-img" />
+                        <p class="our-facilitation-subtitle">Biology Lab</p>
+                    </div>
+                </section>
             </section>
         </section>
         <!-- MESSAGE US -->
-        <section class="message-us">
+        <section class="message-us" id="message-us">
             <section class="message-us-header">
                 <h1 class="message-us-header-title">Message Us</h1>
             </section>
@@ -163,42 +301,72 @@
                     <form class="form">
                         <section class="subform form-name">
                             <label class="form-label" for="name">Name :</label>
-                            <input type="text" placeholder="Enter Your Name" id="name" />
+                            <input type="text" placeholder="Enter Your Name" id="name" class="form-input" />
                         </section>
 
                         <section class="subform form-birthday">
                             <label class="form-label" for="birthday">Birthday :</label>
-                            <input type="date" placeholder="Enter Your Birthday" id="birthday" />
+                            <input type="date" placeholder="Enter Your Birthday" id="birthday" class="form-input" />
                         </section>
 
                         <section class="subform form-gender">
                             <label class="form-label" for="gender">Gender :</label>
                             <input type="radio" id="man" name="gender" value="Man" />
+                            <label class="form-label" for="man">Man</label>
                             <input type="radio" id="woman" name="gender" value="Woman" />
+                            <label class="form-label" for="woman">Woman</label>
+                        </section>
+
+                        <section class="subform form-phone-number">
+                            <label class="form-label" for="number">Phone Number :</label>
+                            <input type="number" placeholder="Enter Your Phone Number" id="phone-number"
+                                class="form-input" />
+                        </section>
+
+                        <section class="subform form-email">
+                            <label class="form-label" for="email">Email :</label>
+                            <input type="email" placeholder="Enter Your Emaiil" id="email" class="form-input" />
                         </section>
 
                         <section class="subform form-message">
                             <label class="form-label" for="message">Message :</label>
-                            <textarea id="message" placeholder="Enter Your Message"></textarea>
+                            <textarea id="message" placeholder="Enter Your Message" class="form-textarea"></textarea>
                         </section>
 
                         <section class="subform form-sumbit">
-                            <input type="submit" />
+                            <input type="submit" class="form-input-sumbit" id="sumbit" />
                         </section>
                     </form>
                 </article>
                 <aside class="message-us-result">
-                    <section class="result"></section>
+                    <section class="result">
+                        <article class="result-time i-0">Current time :</article>
+                        <article class="result-identity">
+                            <p class="txt-i i-1">Name : </p>
+                            <p class="txt-i i-2">Birthday : </p>
+                            <p class="txt-i i-3">Gender : </p>
+                            <p class="txt-i i-4">Phone Number : </p>
+                            <p class="txt-i i-5">Email : </p>
+                            <p class="txt-i i-6">Message : </p>
+                        </article>
+                    </section>
                 </aside>
             </section>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer></footer>
+    <footer class="footer">
+        <section class="logo-n-name">
+            <img src="assets/img/logo/logo.png" alt="WIS Logo" class="footer-logo" />
+            <h6 class="school-name">Winner International School</h6>
+        </section>
+        <section class="copyright">Copyright © 2024. All rights reserved.
+        </section>
+    </footer>
 
     <!-- JAVA SCRIPT -->
-    <script src="script.js"></script>
+    <script src="js/script.js" r></script>
 </body>
 
 </html>
