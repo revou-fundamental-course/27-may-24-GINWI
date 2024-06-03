@@ -126,7 +126,7 @@ sumbitButton.addEventListener('click', function resultMessage(event) {
     // RESULT
     // TIME
     let currentTime = new Date();
-    let currenHour = currentTime.getHours();
+    let currentHour = currentTime.getHours();
     let currentMinute = currentTime.getMinutes();
     let currentSecond = currentTime.getSeconds();
 
@@ -140,7 +140,7 @@ sumbitButton.addEventListener('click', function resultMessage(event) {
     const resultP6 = document.querySelector('.i-6');
 
     // WORK
-    resultP0.innerHTML = "Current Time : " + currentTime + currenHour + currentMinute + currentSecond;
+    resultP0.innerHTML = "Current Time : " + currentTime + currentHour + currentMinute;
     resultP1.innerHTML = "Name : " + name;
     resultP2.innerHTML = "Birthday : " + birthday;
     resultP3.innerHTML = "Gender : " + gender;

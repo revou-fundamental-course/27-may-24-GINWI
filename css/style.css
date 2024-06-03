@@ -35,9 +35,11 @@ body{
     padding: 20px;
     font-size: 1.2em;
     font-family: "Nunito", sans-serif;
+    display: flex;
+    align-items: center;
 }
 
-#username, #password, #email, #phone-number{
+#username, #password, #emaiL, #phonenumber{
     padding: 5px;
     border-radius: 5px;
 }
@@ -81,6 +83,37 @@ body{
     position: fixed;
     width: 100%;
     background-color: #F7F7F7;
+}
+
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 30px;
+    justify-content: space-between;
+    position: relative;
+    right: 30px;
+    z-index: 2;
+}
+
+.menu-toggle input{
+    position: absolute;
+    opacity: 0;
+    width: 225px;
+    height: 38px;
+    right: -96px;
+    bottom: -10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 40px;
+    height: 7px;
+    margin-bottom: 5px;
+    background-color: #222;
+    border-radius: 3px;
+    transition: all .5s;
 }
 
 ul{
@@ -153,7 +186,7 @@ ul li a:hover{
 
 /* BANNER */
 .banner{
-    margin-top: 200px;
+    margin-top: 130px;
     margin-bottom: 70px;
     background-image: url(../assets/img/banner/banner-filter.png);
     background-repeat: no-repeat;
@@ -162,7 +195,8 @@ ul li a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .banner-txt{
@@ -176,7 +210,7 @@ ul li a:hover{
 }
 
 .title{
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: Arial, Helvetica, sans-serif;
     color: #F7F7F7;
     font-weight: bolder;
@@ -294,6 +328,7 @@ main{}
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
     margin: 5px;
+    text-align: center;
 }
 
 /* MISSION */
@@ -383,6 +418,7 @@ main{}
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     background-color: #F7F7F7;
 }
@@ -403,8 +439,9 @@ main{}
 .message-us-content{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 300px;
+    gap: 10px;
 }
 
 .form{
@@ -423,12 +460,13 @@ main{}
 .form-label{
     font-family: "Nunito", sans-serif;
     font-weight: 400;
+    font-size: .7em;
 }
 
 .form-input{
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 0px 0px;
+    margin: 0px;
+    border-radius: 3px;
 }
 
 .form-textarea{
@@ -442,13 +480,12 @@ main{}
 
 .form-input-sumbit{
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 10px 0px;
+    border-radius: 1px;
+    padding: 2px 5px;
     background-color: #222;
     color: #F7F7F7;
     text-align: center;
-    font-size: 1.1em;
+    font-size: .7em;
     cursor: pointer;
 }
 
@@ -457,22 +494,23 @@ main{}
 }
 
 .result{
-    width: 500px;
     height: auto;
     border: 1px solid black;
 }
 
 .result-time{
-    padding: 10px 20px;
+    padding: 5px 10px;
+    font-size: .7em;
     font-family: "Nunito", sans-serif;
 }
 
 .result-identity{
-    padding: 5px 20px;;
+    padding: 0px 5px;
     font-family: "Nunito", sans-serif;
 }
 
 .txt-i{
+    font-size: .6em;
     margin-bottom: 10px;
 }
 
@@ -504,4 +542,164 @@ main{}
 .copyright{
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width:920px){
+    .login-register-side{
+        min-width: 100%;
+    }
+
+    .login-side-title{
+        font-size: 2.5em;
+    }
+
+    .label-login{
+        font-size: .7em;
+    }
+
+    .login-side-username, .login-side-password, .login-side-email, .login-side-phone-number{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .do-not{
+        font-size: .8em;
+    }
+
+    .title{
+        font-size: 2em;
+    }
+
+    .description{
+        font-size: .9em;
+    }
+
+    .register{
+        padding: 5px 20px;
+        font-size: 1em;
+    }
+
+    .learn-more{
+        padding: 5px 20px;
+        font-size: 1em;
+    }
+
+    .our-facilitation-img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .img-border{
+        width: 152px;
+        height: 152px;
+        margin: 20px;
+    }
+
+    .our-facilitation-subtitle{
+        font-size: .7em;
+        padding:8px;
+    }
+
+    .message-us-header-title{
+        padding: 10px;
+        font-size: 2.5em;
+        margin: 20px;
+    }
+
+    .form-label{
+        font-size: .7em;
+    }
+
+    .form-input{
+        padding: 2px;
+        border-radius: 3px;
+    }
+
+    .form-input-sumbit{
+        font-size: .7em;
+        padding: 5px 10px;
+        border-radius: 3px;
+    }
+
+    .message-us-result{
+        margin-bottom: 70px;
+    }
+
+    .footer-logo{
+        width: 50px;
+        padding: 10px;
+    }
+
+    .school-name{
+        font-size: .7em;
+    }
+
+    .copyright{
+        font-size: .7em;
+        padding: 10px;
+    }
+}
+
+@media (max-width:885px){
+    .header-logo{
+        width:50px;
+        padding: 5px;
+    }
+    ul li a{
+        font-size: .7em;
+    }
+
+    .login, .regist, .logout{
+        font-size: .9em;
+        padding: 5px 10px;
+        margin: 5px;
+    }
+
+    .banner{
+        margin-top: 65px;
+    }
+
+    .logo-name{
+        margin-top: 20px;
+    }
+
+    .name-school{
+        font-size: 2em;
+    }
+}
+
+@media (max-width:730px){
+    .login-side-title{
+        font-size: 1.5em;
+    }
+
+    .label-login{
+        font-size: .6em;
+    }
+
+    #username, #password, #emaiL, #phonenumber{
+        padding: 0px;
+        border-radius: 3px;
+        width: 100%;
+        font-size: .5em;
+    }
+
+    .login-sumbit{
+        padding: 5px 10px;
+        border-radius: 2px;
+        font-size: .8em;
+    }
+
+    .do-not{
+        font-size: .5em;
+    }
+
+    .title{
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width:590px){
+
 }
