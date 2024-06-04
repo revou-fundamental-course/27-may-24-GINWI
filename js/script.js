@@ -10,17 +10,6 @@ const title = document.querySelector('.title')
 const registerButton = document.querySelector('.register');
 const loginSide = document.querySelector('.login-register-side');
 
-loginButton.addEventListener('click', function goLogin() {
-    loginSide.style.display = "flex";
-    titleLogin.innerHTML = "Login"
-})
-
-registButton.addEventListener('click', function goLogin() {
-    loginSide.style.display = "flex";
-    titleLogin.innerHTML = "Register";
-    inputPassword.setAttribute("placeholder", "Create A Difficult Password");
-    loginToRegister.innerHTML = "Already Have An Account?, Just Log In Now !";
-})
 
 sumbitLoginButton.addEventListener('click', function login() {
     // INPUT
@@ -36,22 +25,74 @@ sumbitLoginButton.addEventListener('click', function login() {
     const numberInput = document.getElementById('phonenumber');
     const number = numberInput.value;
 
+    let textErrorUsername = document.querySelector('.error-username')
+    let textErrorPassword = document.querySelector('.error-password')
+    let textErrorEmail = document.querySelector('.error-email')
+    let textErrorPhoneNumber = document.querySelector('.error-phone-number')
     // RESULT
-    title.innerHTML = "Hi " + username + ", Welcome To Our Website";
+    if (username == "" && password == "" && email == "" && number == "") {
+        textErrorUsername.innerHTML = "Username Is Required"
+        textErrorPassword.innerHTML = "Password Is Required"
+        textErrorEmail.innerHTML = "Email Is Required"
+        textErrorPhoneNumber.innerHTML = "Phone Number Is Required"
+    } else if (username == "" && password == "" && email == "") {
+        textErrorUsername.innerHTML = "Username Is Required"
+        textErrorPassword.innerHTML = "Password Is Required"
+        textErrorEmail.innerHTML = "Email Is Required"
+    } else if (username == "" && email == "" && number == "") {
+        textErrorUsername.innerHTML = "Username Is Required"
+        textErrorEmail.innerHTML = "Email Is Required"
+        textErrorPhoneNumber.innerHTML = "PhoneNumber Is Required"
+    } else if (username == "" && password == "" && number == "") {
+        textErrorUsername.innerHTML = "Username Is Required"
+        textErrorPassword.innerHTML = "Password Is Required"
+        textErrorPhoneNumber.innerHTML = "Phone Number Is Required"
+    } else if (password == "" && email == "" && number == "") {
+        textErrorPassword.innerHTML = "Password Is Required"
+        textErrorEmail.innerHTML = "Email Is Required"
+        textErrorPhoneNumber.innerHTML = "Phone Number Is Required"
+    } else if (username == "" && password == "") {
+        textErrorUsername.innerHTML = "Username Is Required"
+        textErrorPassword.innerHTML = "Password Is Required"
+    } else if (username == "" && email == "") {
+        textErrorUsername.innerHTML = "Username Is Required"
+        textErrorEmail.innerHTML = "Email Is Required"
+    } else if (username == "" && number == "") {
+        textErrorUsername.innerHTML = "Username Is Required"
+        textErrorPhoneNumber.innerHTML = "Number Is Required"
+    } else if (password == "" && email == "") {
+        textErrorPassword.innerHTML = "Password Is Required"
+        textErrorEmail.innerHTML = "Email Is Required"
+    } else if (password == "" && number == "") {
+        textErrorPassword.innerHTML = "Password Is Required"
+        textErrorPhoneNumber.innerHTML = "Phone Number Is Required"
+    } else if (email == "" && number == "") {
+        textErrorEmail.innerHTML = "Email Is Required"
+        textErrorPhoneNumber.innerHTML = "Phone Number Is Required"
+    } else if (username == "") {
+        textErrorPassword.innerHTML = "Username Is Required"
+    } else if (password == "") {
+        textErrorPassword.innerHTML = "Password Is Required"
+    } else if (email == "") {
+        textErrorEmail.innerHTML = "Email Is Required"
+    } else if (number == "") {
+        textErrorPhoneNumber.innerHTML = "Phone Number Is Required"
+    } else {
+        title.innerHTML = "Hi " + username + ", Welcome To Our Website";
+        loginSide.style.display = "none";
+        registerButton.innerHTML = "Change Account";
+        logoutButton.style.display = 'block';
+        loginButton.style.display = 'none';
+        registButton.style.display = 'none';
 
-    loginSide.style.display = "none";
-
-    registerButton.innerHTML = "Change Account";
-    logoutButton.style.display = 'block';
-    loginButton.style.display = 'none';
-    registButton.style.display = 'none';
-
-    usernameInput.value = "";
-    passwordInput.value = "";
-    numberInput.value = "";
-    emailInput.value = "";
+        usernameInput.value = "";
+        passwordInput.value = "";
+        numberInput.value = "";
+        emailInput.value = "";
+    }
 })
 
+// LOGOUT BUTTON
 logoutButton.addEventListener('click', function logout() {
     logoutButton.style.display = 'none';
     loginButton.style.display = 'block';
@@ -61,6 +102,8 @@ logoutButton.addEventListener('click', function logout() {
 
 })
 
+
+// LOGIN->REGISTER
 loginToRegister.addEventListener('click', function registerOn() {
     titleLogin.innerHTML = "Register";
     inputPassword.setAttribute("placeholder", "Create A Difficult Password");
@@ -68,19 +111,36 @@ loginToRegister.addEventListener('click', function registerOn() {
 }
 )
 
-registerButton.addEventListener('click', function register(){
+// REGISTER
+registerButton.addEventListener('click', function register() {
     loginSide.style.display = 'flex';
 })
 
 
 
+// GO LOGIN
+loginButton.addEventListener('click', function goLogin() {
+    loginSide.style.display = "flex";
+    titleLogin.innerHTML = "Login"
+})
+
+registButton.addEventListener('click', function goLogin() {
+    loginSide.style.display = "flex";
+    titleLogin.innerHTML = "Register";
+    inputPassword.setAttribute("placeholder", "Create A Difficult Password");
+    loginToRegister.innerHTML = "Already Have An Account?, Just Log In Now !";
+})
 
 
 
 
+// LEARN MORE BUTTON
+const learnMoreButton = document.querySelector('.learn-more')
 
-
-
+learnMoreButton.addEventListener('click', function () {
+    location.hash = "#our-profile"
+}
+)
 
 
 
@@ -109,7 +169,7 @@ sumbitButton.addEventListener('click', function resultMessage(event) {
     } else if (genderInputWoman.checked) {
         gender = "Woman";
     } else {
-        gender = "Custom";
+        gender = "";
     }
 
     const phoneNumberInput = document.getElementById('phone-number');
@@ -121,16 +181,12 @@ sumbitButton.addEventListener('click', function resultMessage(event) {
     const messageInput = document.getElementById('message');
     let message = messageInput.value;
 
-
-
-    // RESULT
-    // TIME
     let currentTime = new Date();
     let currentHour = currentTime.getHours();
     let currentMinute = currentTime.getMinutes();
     let currentSecond = currentTime.getSeconds();
 
-
+    // TAKE RESULT ELEMENT
     const resultP0 = document.querySelector('.i-0');
     const resultP1 = document.querySelector('.i-1');
     const resultP2 = document.querySelector('.i-2');
@@ -139,7 +195,7 @@ sumbitButton.addEventListener('click', function resultMessage(event) {
     const resultP5 = document.querySelector('.i-5');
     const resultP6 = document.querySelector('.i-6');
 
-    // WORK
+    // RESULT
     resultP0.innerHTML = "Current Time : " + currentTime + currentHour + currentMinute;
     resultP1.innerHTML = "Name : " + name;
     resultP2.innerHTML = "Birthday : " + birthday;
@@ -147,4 +203,10 @@ sumbitButton.addEventListener('click', function resultMessage(event) {
     resultP4.innerHTML = "Phone Number : " + phoneNumber;
     resultP5.innerHTML = "Email : " + email;
     resultP6.innerHTML = "Message : " + message;
+
+    nameInput.value = "";
+    birthdayInput.value = "";
+    emailInput.value = "";
+    phoneNumberInput.value = "";
+    messageInput.value = "";
 })
