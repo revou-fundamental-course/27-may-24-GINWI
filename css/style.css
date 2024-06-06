@@ -122,7 +122,7 @@ body{
     align-items: center;
 }
 
-#username, #password, #emaiL, #phonenumber{
+#username, #password, #email, #phonenumber{
     padding: 5px;
     border-radius: 5px;
 }
@@ -352,11 +352,11 @@ main{}
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     background-color: #F7F7F7;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #222; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden;
+    border-right: .15em solid #222; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
     animation: 
     typing 5s steps(40, end) infinite,
     blink-caret .75s step-end infinite;
@@ -465,7 +465,7 @@ main{}
     align-items: center;
 }
 
-.mySlide{
+.slide{
     display:none;
 }
 
@@ -552,10 +552,11 @@ main{}
 }
 
 .achievement h4{
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-family: "Mulish", sans-serif;
-    font-weight: 500;
-    padding: 10px;
+    font-weight: 700;
+    padding: 20px;
+    margin: 14px;
 }
 
 .achievement-content{
@@ -573,10 +574,6 @@ main{}
     justify-content: center;
     gap: 20px;
     background-color: #F7F7F7;
-}
-
-.message-us-header{
-    
 }
 
 .message-us-header-title{
@@ -661,7 +658,7 @@ main{}
     font-family: "Nunito", sans-serif;
 }
 
-.txt-i{
+.results{
     font-size: .6em;
     margin-bottom: 10px;
 }
@@ -839,7 +836,7 @@ main{}
         font-size: .6em;
     }
 
-    #username, #password, #emaiL, #phonenumber{
+    #username, #password, #email, #phonenumber{
         padding: 0px;
         border-radius: 3px;
         width: 100%;
@@ -926,11 +923,11 @@ main{}
     }
 
     .title{
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 
     .description{
-        font-size: .6em;
+        font-size: .8em;
     }
 
     .login, .regist, .logout{

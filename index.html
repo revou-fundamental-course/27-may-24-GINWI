@@ -51,7 +51,7 @@
             <p class="error error-password"></p>
             <section class="login-side-email">
                 <label class="label-login" for="Email">Email : </label>
-                <input type="email" id="emaiL" placeholder="Enter Your Email" />
+                <input type="email" id="email" placeholder="Enter Your Email" />
             </section>
             <p class="error error-email"></p>
             <section class="login-side-phone-number">
@@ -199,13 +199,13 @@
             </section>
             <!-- SLIDER -->
             <section class="slider">
-                <article class="mySlide fade">
+                <article class="slide fade">
                     <img src="assets/img/slider/slider-1.jpg" class="img-slider" />
                 </article>
-                <article class="mySlide fade">
+                <article class="slide fade">
                     <img src="assets/img/slider/slider-2.jpg" class="img-slider" />
                 </article>
-                <article class="mySlide fade">
+                <article class="slide fade">
                     <img src="assets/img/slider/slider-3.jpg" class="img-slider" />
                 </article>
                 <article class="dots">
@@ -337,54 +337,56 @@
                 <article class="message-us-form">
                     <form class="form">
                         <section class="subform form-name">
-                            <label class="form-label" for="name">Name (Optional) :</label>
-                            <input type="text" placeholder="Enter Your Name" id="name" class="form-input" />
+                            <label class="form-label" for="m-name">Name :</label>
+                            <input type="text" placeholder="Enter Your Name" id="m-name" class="form-input" required />
                         </section>
 
                         <section class="subform form-birthday">
-                            <label class="form-label" for="birthday">Birthday (Optional) :</label>
-                            <input type="date" placeholder="Enter Your Birthday" id="birthday" class="form-input" />
+                            <label class="form-label" for="m-birthday">Birthday :</label>
+                            <input type="date" placeholder="Enter Your Birthday" id="m-birthday" class="form-input"
+                                required />
                         </section>
 
                         <section class="subform form-gender">
-                            <label class="form-label" for="gender">Gender (Optional) :</label>
-                            <input type="radio" id="man" name="gender" value="Man" />
+                            <label class="form-label" for="gender">Gender :</label>
+                            <input type="radio" id="m-man" name="gender" value="Man" />
                             <label class="form-label" for="man">Man</label>
-                            <input type="radio" id="woman" name="gender" value="Woman" />
+                            <input type="radio" id="m-woman" name="gender" value="Woman" />
                             <label class="form-label" for="woman">Woman</label>
                         </section>
 
                         <section class="subform form-phone-number">
-                            <label class="form-label" for="number">Phone Number (Optional) :</label>
-                            <input type="number" placeholder="Enter Your Phone Number" id="phone-number"
-                                class="form-input" />
+                            <label class="form-label" for="m-number">Phone Number :</label>
+                            <input type="number" placeholder="Enter Your Phone Number" id="m-phone-number"
+                                class="form-input" required />
                         </section>
 
                         <section class="subform form-email">
-                            <label class="form-label" for="email">Email (Optional) :</label>
-                            <input type="email" placeholder="Enter Your Email" id="email" class="form-input" />
+                            <label class="form-label" for="email">Email :</label>
+                            <input type="email" placeholder="Enter Your Email" id="m-email" class="form-input"
+                                required />
                         </section>
 
                         <section class="subform form-message">
-                            <label class="form-label" for="message">Message (Optional) :</label>
-                            <textarea id="message" placeholder="Enter Your Message" class="form-textarea"></textarea>
+                            <label class="form-label" for="message">Message :</label>
+                            <textarea id="m-message" placeholder="Enter Your Message" class="form-textarea"></textarea>
                         </section>
 
                         <section class="subform form-sumbit">
-                            <input type="submit" class="form-input-sumbit" id="sumbit" />
+                            <input type="submit" class="form-input-sumbit" id="m-sumbit" />
                         </section>
                     </form>
                 </article>
                 <aside class="message-us-result">
                     <section class="result">
-                        <article class="result-time i-0">Current time :</article>
+                        <article class="result-time r-time">Current time :</article>
                         <article class="result-identity">
-                            <p class="txt-i i-1">Name : </p>
-                            <p class="txt-i i-2">Birthday : </p>
-                            <p class="txt-i i-3">Gender : </p>
-                            <p class="txt-i i-4">Phone Number : </p>
-                            <p class="txt-i i-5">Email : </p>
-                            <p class="txt-i i-6">Message : </p>
+                            <p class="results r-name">Name : </p>
+                            <p class="results r-birthday">Birthday : </p>
+                            <p class="results r-gender">Gender : </p>
+                            <p class="results r-phone-number">Phone Number : </p>
+                            <p class="results r-email">Email : </p>
+                            <p class="results r-message">Message : </p>
                         </article>
                     </section>
                 </aside>
@@ -403,7 +405,7 @@
     </footer>
 
     <!-- JAVA SCRIPT -->
-    <script src="js/script.js" r></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

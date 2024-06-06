@@ -14,16 +14,16 @@ const loginSide = document.querySelector('.login-register-side');
 sumbitLoginButton.addEventListener('click', function login() {
     // INPUT
     const usernameInput = document.getElementById('username');
-    const username = usernameInput.value;
+    let username = usernameInput.value;
 
     const passwordInput = document.getElementById('password');
-    const password = passwordInput.value;
+    let password = passwordInput.value;
 
-    const emailInput = document.getElementById('emaiL');
-    const email = emailInput.value;
+    const emailInput = document.getElementById('email');
+    let email = emailInput.value;
 
     const numberInput = document.getElementById('phonenumber');
-    const number = numberInput.value;
+    let number = numberInput.value;
 
     let textErrorUsername = document.querySelector('.error-username')
     let textErrorPassword = document.querySelector('.error-password')
@@ -148,39 +148,39 @@ let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlide");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" ", " active");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000);
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" ", " active");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 5000);
 }
 
 
 
 
 // RESULT MESSAGE US
-const sumbitButton = document.getElementById('sumbit');
+const sumbitButton = document.getElementById('m-sumbit');
 
 sumbitButton.addEventListener('click', function resultMessage(event) {
     event.preventDefault();
     // INPUT
-    const nameInput = document.getElementById('name');
-    const name = nameInput.value;
+    const nameInput = document.getElementById('m-name');
+    let name = nameInput.value;
 
-    const birthdayInput = document.getElementById('birthday');
+    const birthdayInput = document.getElementById('m-birthday');
     let birthday = birthdayInput.value;
 
-    const genderInputMan = document.getElementById('man');
-    const genderInputWoman = document.getElementById('woman');
+    const genderInputMan = document.getElementById('m-man');
+    const genderInputWoman = document.getElementById('m-woman');
     let gender = "";
 
     if (genderInputMan.checked) {
@@ -191,13 +191,13 @@ sumbitButton.addEventListener('click', function resultMessage(event) {
         gender = "";
     }
 
-    const phoneNumberInput = document.getElementById('phone-number');
+    const phoneNumberInput = document.getElementById('m-phone-number');
     let phoneNumber = phoneNumberInput.value;
 
-    const emailInput = document.getElementById('email');
+    const emailInput = document.getElementById('m-email');
     let email = emailInput.value;
 
-    const messageInput = document.getElementById('message');
+    const messageInput = document.getElementById('m-message');
     let message = messageInput.value;
 
     let currentTime = new Date();
@@ -206,26 +206,31 @@ sumbitButton.addEventListener('click', function resultMessage(event) {
     let currentSecond = currentTime.getSeconds();
 
     // TAKE RESULT ELEMENT
-    const resultP0 = document.querySelector('.i-0');
-    const resultP1 = document.querySelector('.i-1');
-    const resultP2 = document.querySelector('.i-2');
-    const resultP3 = document.querySelector('.i-3');
-    const resultP4 = document.querySelector('.i-4');
-    const resultP5 = document.querySelector('.i-5');
-    const resultP6 = document.querySelector('.i-6');
+    let resultTime = document.querySelector('.r-time');
+    let resultName = document.querySelector('.r-name');
+    let resultBirthday = document.querySelector('.r-birthday');
+    let resultGender = document.querySelector('.r-gender');
+    let resultPhoneNumber = document.querySelector('.r-phone-number');
+    let resultEmail = document.querySelector('.r-email');
+    let resultMessage = document.querySelector('.r-message');
 
     // RESULT
-    resultP0.innerHTML = "Current Time : " + currentTime + currentHour + currentMinute;
-    resultP1.innerHTML = "Name : " + name;
-    resultP2.innerHTML = "Birthday : " + birthday;
-    resultP3.innerHTML = "Gender : " + gender;
-    resultP4.innerHTML = "Phone Number : " + phoneNumber;
-    resultP5.innerHTML = "Email : " + email;
-    resultP6.innerHTML = "Message : " + message;
+    //6
+    if (name == "" || birthday == "" || gender == "" || phoneNumber == "" || email == "" || message == "") {
+        alert('All Data Must be Filled in');
+    } else {
+        resultTime.innerHTML = "Current Time : " + currentTime + currentHour + currentMinute;
+        resultName.innerHTML = "Name : " + name;
+        resultBirthday.innerHTML = "Birthday : " + birthday;
+        resultGender.innerHTML = "Gender : " + gender;
+        resultPhoneNumber.innerHTML = "Phone Number : " + phoneNumber;
+        resultEmail.innerHTML = "Email : " + email;
+        resultMessage.innerHTML = "Message : " + message;
 
-    nameInput.value = "";
-    birthdayInput.value = "";
-    emailInput.value = "";
-    phoneNumberInput.value = "";
-    messageInput.value = "";
+        nameInput.value = "";
+        birthdayInput.value = "";
+        emailInput.value = "";
+        phoneNumberInput.value = "";
+        messageInput.value = "";
+    }
 })
